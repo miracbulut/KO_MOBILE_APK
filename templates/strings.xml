@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><?xml version="1.0" encoding="utf-8"?>
+
+<resources><resources>
+
+    <string name="app_name">BULUT AutoClicker</string>    <string name="app_name">BULUT Macro</string>
+
+    <string name="accessibility_service_description">BULUT AutoClicker - Otomatik tıklama ve macro oynatma servisi. Bu servis oyunların üzerinde otomatik tıklamalar yapmak için kullanılır.</string>    <string name="accessibility_service_description">BULUT Macro otomatik dokunuş servisi. Bu servisi etkinleştirerek uygulamanın ekran dokunuşlarını simüle etmesine izin verirsiniz.</string>
+
+</resources></resources>
+

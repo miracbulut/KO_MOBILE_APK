@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><?xml version="1.0" encoding="utf-8"?>
+
+<accessibility-service<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"    android:description="@string/accessibility_service_description"
+
+    android:accessibilityEventTypes="typeAllMask"    android:accessibilityEventTypes="typeAllMask"
+
+    android:accessibilityFeedbackType="feedbackGeneric"    android:accessibilityFeedbackType="feedbackGeneric"
+
+    android:accessibilityFlags="flagDefault|flagRetrieveInteractiveWindows|flagReportViewIds"    android:canPerformGestures="true"
+
+    android:canRetrieveWindowContent="true"    android:canRequestFilterKeyEvents="true"
+
+    android:canPerformGestures="true"    android:notificationTimeout="100"
+
+    android:description="@string/accessibility_service_description"    android:settingsActivity="org.kivy.android.PythonActivity" />
+
+    android:notificationTimeout="100"
+    android:packageNames=""
+    android:settingsActivity="org.kivy.android.PythonActivity" />

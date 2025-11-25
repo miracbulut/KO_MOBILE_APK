@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.bulut.bulutautoclicker"    package="com.bulut.bulutmacro">
+
+    android:versionCode="1"
+
+    android:versionName="1.0.0">    <!-- İzinler -->
+
+        <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- İzinler -->    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.INTERNET" />    
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />    <application
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />        android:allowBackup="true"
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />        android:icon="@mipmap/ic_launcher"
+
+            android:label="BULUT Macro"
+
+    <application        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+        android:label="BULUT AutoClicker"        
+
+        android:icon="@mipmap/ic_launcher"        <!-- Ana aktivite -->
+
+        android:allowBackup="true">        <activity
+
+                    android:name="org.kivy.android.PythonActivity"
+
+        <!-- Ana Activity -->            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+
+        <activity            android:label="BULUT Macro">
+
+            android:name="org.kivy.android.PythonActivity"            <intent-filter>
+
+            android:label="BULUT AutoClicker"                <action android:name="android.intent.action.MAIN" />
+
+            android:configChanges="orientation|keyboardHidden|screenSize"                <category android:name="android.intent.category.LAUNCHER" />
+
+            android:screenOrientation="portrait"            </intent-filter>
+
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"        </activity>
+
+            android:exported="true">        
+
+            <intent-filter>        <!-- Accessibility Service -->
+
+                <action android:name="android.intent.action.MAIN" />        <service
+
+                <category android:name="android.intent.category.LAUNCHER" />            android:name=".AutoTouchService"
+
+            </intent-filter>            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+
+        </activity>            android:exported="false">
+
+                    <intent-filter>
+
+        <!-- Accessibility Service -->                <action android:name="android.accessibilityservice.AccessibilityService" />
+
+        <service            </intent-filter>
+
+            android:name="com.bulut.bulutautoclicker.AutoClickService"            <meta-data
+
+            android:label="BULUT AutoClicker"                android:name="android.accessibilityservice"
+
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"                android:resource="@xml/accessibility_service_config" />
+
+            android:exported="true">        </service>
+
+            <intent-filter>        
+
+                <action android:name="android.accessibilityservice.AccessibilityService" />    </application>
+
+            </intent-filter></manifest>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+        
+    </application>
+</manifest>
